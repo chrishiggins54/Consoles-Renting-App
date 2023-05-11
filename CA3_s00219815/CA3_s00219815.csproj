@@ -135,6 +135,26 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image1.png" />
+    <Resource Include="Images\2600.jpg" />
+    <Resource Include="Images\Dreamcast.jpg" />
+    <Resource Include="Images\Game Boy Advance SP.jpg" />
+    <Resource Include="Images\Game Boy Advance.jpg" />
+    <Resource Include="Images\GameCube.jpg" />
+    <Resource Include="Images\New Nintendo 3DS XL.jpg" />
+    <Resource Include="Images\PlayStation 2.jpg" />
+    <Resource Include="Images\PlayStation 3.jpg" />
+    <Resource Include="Images\PlayStation 4 Pro.jpg" />
+    <Resource Include="Images\PlayStation 4.jpg" />
+    <Resource Include="Images\PlayStation 5.jpg" />
+    <Resource Include="Images\Steam Deck.jpeg" />
+    <Resource Include="Images\Switch Lite.jpg" />
+    <Resource Include="Images\Switch.jpg" />
+    <Resource Include="Images\Wii U.jpg" />
+    <Resource Include="Images\Xbox 360.jpg" />
+    <Resource Include="Images\Xbox One X.jpg" />
+    <Resource Include="Images\Xbox One.jpg" />
+    <Resource Include="Images\Xbox Series X.jpg" />
+    <Resource Include="Images\Xbox.jpg" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -149,5 +169,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

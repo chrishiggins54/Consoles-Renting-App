@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace CA3_s00219815
 {
@@ -61,6 +63,7 @@ namespace CA3_s00219815
 
         private void ShowAvailableConsoles()
         {
+
             string selectedConsoleType = cbxConsoleType.SelectedItem as string;
             DateTime startDate = dpStartDate.SelectedDate ?? DateTime.MinValue;
             DateTime endDate = dpEndDate.SelectedDate ?? DateTime.MaxValue;
@@ -85,11 +88,21 @@ namespace CA3_s00219815
         {
             if (dgConsolesAvailable.SelectedItem is ConsoleInfo selectedConsole)
             {
-                tblkSelectedConsole.Text = $"Brand: {selectedConsole.Brand}, Model: {selectedConsole.Model}, Type: {selectedConsole.Type}";
+                tblkSelectedConsole.Text = $"{selectedConsole.Brand}, {selectedConsole.Model} ({selectedConsole.Type})";
                 CurrentBooking = new Booking { ConsoleID = selectedConsole.ID };
+
+                // Load the image of the selected console
+                string imagePath = $"Images/{selectedConsole.Model}.jpg";
+                if (File.Exists(imagePath))
+                {
+                    imgSelectedConsole.Source = new BitmapImage(new Uri(imagePath, UriKind.Relative));
+                }
+                else
+                {
+                    imgSelectedConsole.Source = null;
+                }
             }
         }
-
 
 
         private void cbxConsoleType_SelectionChanged(object sender, SelectionChangedEventArgs e)
