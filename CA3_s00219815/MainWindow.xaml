@@ -62,14 +62,23 @@
         </TabItem>
         <!-- Other Tabs -->
         <TabItem Name="Ex2" Header="Consoles">
-            <Grid Margin="10">
-                <DataGrid Name="dgCustomersEx2"/>
+            <Grid Margin="10" >
+                <DataGrid Name="dgCustomersEx2" AutoGenerateColumns="False" ColumnWidth="*" >
+                    <DataGrid.Columns >
+                        <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
+                        <DataGridTextColumn Header="Brand" Binding="{Binding Brand}"/>
+                        <DataGridTextColumn Header="Model" Binding="{Binding Model}"/>
+                        <DataGridTextColumn Header="Type" Binding="{Binding Type}"/>
+                        <!-- Add more columns for other properties if needed -->
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </TabItem>
 
+
         <TabItem Name="Ex3" Header="Bookings">
             <Grid Margin="10">
-                <DataGrid Name="dgCustomersEx3"/>
+                <DataGrid Name="dgCustomersEx3" ColumnWidth="*"/>
             </Grid>
         </TabItem>
     </TabControl>

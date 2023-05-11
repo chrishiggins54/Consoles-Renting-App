@@ -89,7 +89,12 @@ namespace CA3_s00219815
             if (dgConsolesAvailable.SelectedItem is ConsoleInfo selectedConsole)
             {
                 tblkSelectedConsole.Text = $"{selectedConsole.Brand}, {selectedConsole.Model} ({selectedConsole.Type})";
-                CurrentBooking = new Booking { ConsoleID = selectedConsole.ID };
+                CurrentBooking = new Booking
+                {
+                    ConsoleID = selectedConsole.ID,
+                    StartDate = DateTime.Now,
+                    EndDate = DateTime.Now.AddDays(1)
+                };
 
                 // Load the image of the selected console
                 string imagePath = $"Images/{selectedConsole.Model}.jpg";
