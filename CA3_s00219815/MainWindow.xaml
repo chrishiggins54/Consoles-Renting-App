@@ -69,7 +69,6 @@
                         <DataGridTextColumn Header="Brand" Binding="{Binding Brand}"/>
                         <DataGridTextColumn Header="Model" Binding="{Binding Model}"/>
                         <DataGridTextColumn Header="Type" Binding="{Binding Type}"/>
-                        <!-- Add more columns for other properties if needed -->
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
